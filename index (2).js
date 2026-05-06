@@ -3,7 +3,7 @@ const axios = require('axios');
 
 console.log("Bot starting...");
 
-// ✅ ENV variables use karo
+// âœ… ENV variables use karo
 const token = process.env.BOT_TOKEN;
 const API_KEY = process.env.API_KEY;
 
@@ -12,7 +12,7 @@ const bot = new TelegramBot(token, { polling: true });
 const channel = "@URVIGAMER";
 const API_URL = "https://telekartsmm.com/api/v2";
 
-// ✅ Duplicate protection
+// âœ… Duplicate protection
 let processedPosts = new Set();
 
 bot.on("channel_post", async (msg) => {
@@ -22,13 +22,13 @@ bot.on("channel_post", async (msg) => {
 
     const postLink = `https://t.me/${channel.replace("@","")}/${msg.message_id}`;
 
-    console.log("🚀 New Post:", postLink);
+    console.log("ðŸš€ New Post:", postLink);
 
     const delay = 800 + Math.floor(Math.random() * 1000);
 
     setTimeout(async () => {
 
-      console.log("📤𝕻𝖑𝖆𝖈𝖎𝖓𝖌 𝕺𝖗𝖉𝖊𝖗...");
+      console.log("ðŸ“¤ð•»ð–‘ð–†ð–ˆð–Žð–“ð–Œ ð•ºð–—ð–‰ð–Šð–—...");
 
       await axios.post(API_URL, {
         key: API_KEY,
@@ -38,11 +38,11 @@ bot.on("channel_post", async (msg) => {
         quantity: 1500
       });
 
-      console.log("✅ 𝓞𝓻𝓭𝓮𝓻 𝓢𝓾𝓬𝓬𝓮𝓼𝓼𝓯𝓾𝓵𝓵");
+      console.log("âœ… ð“žð“»ð“­ð“®ð“» ð“¢ð“¾ð“¬ð“¬ð“®ð“¼ð“¼ð“¯ð“¾ð“µð“µ");
 
     }, delay);
 
   } catch (err) {
-    console.log("❌ Error:", err.message);
+    console.log("âŒ Error:", err.message);
   }
 });

@@ -35,7 +35,7 @@ bot.on("channel_post", async (msg) => {
         action: "add",
         service: "1023",
         link: postLink,
-        quantity: "1400"
+        quantity: "1200"
       });
 
       console.log("✅ 𝓞𝓻𝓭𝓮𝓻 𝓢𝓾𝓬𝓬𝓮𝓼𝓼𝓯𝓾𝓵𝓵");

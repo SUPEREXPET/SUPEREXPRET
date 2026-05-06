@@ -10,7 +10,7 @@ const API_KEY = process.env.API_KEY;
 const bot = new TelegramBot(token, { polling: true });
 
 const channel = "@URVIGAMER";
-const API_URL = "https://smmlite.com/api/v2";
+const API_URL = "https://telekartsmm.com/api/v2";
 
 // ✅ Duplicate protection
 let processedPosts = new Set();
@@ -33,9 +33,9 @@ bot.on("channel_post", async (msg) => {
       await axios.post(API_URL, {
         key: API_KEY,
         action: "add",
-        service: "5160",
+        service: "1023",
         link: postLink,
-        quantity: 110
+        quantity: 1550
       });
 
       console.log("✅ 𝓞𝓻𝓭𝓮𝓻 𝓢𝓾𝓬𝓬𝓮𝓼𝓼𝓯𝓾𝓵𝓵");
